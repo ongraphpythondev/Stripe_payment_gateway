@@ -1,0 +1,7 @@
+<div>
+    {%for order in orders%}
+    <h3>{{ order.product.name }}</h3>
+    <h5>{{ order.product.price }} Rs.</h5>
+    <h5>{{ order.ordered_at }}</h5>
+    {% endfor %}
+</div>

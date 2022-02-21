@@ -30,7 +30,7 @@ class CreateCheckoutSessionView(View):
                 {
                     'price_data': {
                         'currency': 'inr',
-                        'unit_amount': product.price,
+                        'unit_amount': product.price*100,
                         'product_data': {
                             'name': product.name,
                             # 'images': ['https://i.imgur.com/EHyR2nP.png'],

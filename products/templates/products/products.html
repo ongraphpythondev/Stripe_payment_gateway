@@ -168,7 +168,7 @@
         <div>
             {%for product in products%}
             <h3>{{ product.name }}</h3>
-            <h5>${{ product.price }}</h5>
+            <h5>{{ product.price }} Rs.</h5>
             <button onclick = "myfunction({{product.id}} , {{ product.price }} )">Order</button>
             {% endfor %}
         </div>
@@ -182,8 +182,8 @@
         console.log("hello")
         const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
         var stripe = Stripe("{{ STRIPE_PUBLIC_KEY }}");
-        if(price < 50){
-          alert("Price must be equal and greater than 50")
+        if(price < 1){
+          alert("Price must be equal and greater than 1")
         } 
         fetch("https://stripe-payment-django.herokuapp.com/create-checkout-session/"+id+"/", {
           method: "POST",

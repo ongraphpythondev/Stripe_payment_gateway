@@ -9,3 +9,4 @@ sqlparse==0.4.2
 stripe==2.66.0
 urllib3==1.26.8
 waitress==2.0.0
+whitenoise==6.0.0
